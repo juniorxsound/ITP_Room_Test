@@ -8,7 +8,7 @@ import OrbitControls from '../node_modules/three/examples/js/controls/OrbitContr
 OrbitControls(THREE);
 
 //paths
-const MODEL_PATH = '../assets/';
+const MODEL_PATH = './ITP_Room_Test/assets/';
 
 
 let scene, camera,
