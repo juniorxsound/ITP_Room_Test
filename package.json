@@ -1,0 +1,34 @@
+{
+  "name": "itp_test_scene",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "watch": "watchify src/index.js -o dist/bundle.js -v"
+  },
+  "author": "Or Fleisher",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.85.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "http-server": "^0.10.0",
+    "watchify": "^3.9.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}
