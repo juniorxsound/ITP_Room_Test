@@ -10,7 +10,6 @@ OrbitControls(THREE);
 //paths
 const MODEL_PATH = './ITP_Room_Test/assets/';
 
-
 let scene, camera,
     manager,
     renderer,
@@ -47,7 +46,9 @@ let setupScene = () => {
 
     loader = new THREE.JSONLoader(manager);
     loader.load(MODEL_PATH + 'shiffman.json', (geometry, material) => {
-        room = new THREE.Mesh(geometry, material);
+        let unlitmat = new THREE.MeshBasicMaterial();
+        unlitmat.map = material[0].map;
+        room = new THREE.Mesh(geometry, unlitmat);
         scene.add(room);
     });
 
